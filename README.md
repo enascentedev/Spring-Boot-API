@@ -35,9 +35,6 @@ API [springboot]
 └── README.md
 </pre>
 
-
-
-
 ## Configuração do Banco de Dados
 Configure o banco de dados PostgreSQL no arquivo application.properties:
 
@@ -57,6 +54,7 @@ POST /products: Cria um novo produto.
 GET /products/{id}: Retorna um produto específico.
 PUT /products/{id}: Atualiza um produto específico.
 DELETE /products/{id}: Remove um produto específico.
+
 Nível 1: Recursos com URI's
 O controlador de produtos (ProductController.java) gerencia os endpoints.
 
@@ -64,7 +62,11 @@ Nível 2: Métodos HTTP adequados
 Os métodos HTTP GET, POST, PUT e DELETE são usados adequadamente para manipular os recursos.
 
 Nível 3: HATEOAS
-Os links HATEOAS são adicionados aos recursos retornados pela API.
+A API utiliza HATEOAS, incluindo links hipermídia nas respostas para permitir que os clientes naveguem dinamicamente pela API.
+Este projeto atinge o Nível 3 do Modelo de Maturidade de Richardson, utilizando HATEOAS para fornecer links hipermídia nas respostas da API.
+
+Modelo de Maturidade de Richardson
+O Modelo de Maturidade de Richardson é uma forma de avaliar a conformidade de uma API com os princípios REST. Ele é composto por quatro níveis:
 
 ## Dependências do Maven
 
