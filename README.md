@@ -35,6 +35,9 @@ API [springboot]
 └── README.md
 </pre>
 
+
+
+
 ## Configuração do Banco de Dados
 Configure o banco de dados PostgreSQL no arquivo application.properties:
 
@@ -62,3 +65,35 @@ Os métodos HTTP GET, POST, PUT e DELETE são usados adequadamente para manipula
 
 Nível 3: HATEOAS
 Os links HATEOAS são adicionados aos recursos retornados pela API.
+
+## Dependências do Maven
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.7.3</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-hateoas</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
